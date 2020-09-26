@@ -18,6 +18,11 @@ variable "private_key_path" {
     description = "Private key path to connect ec2 machines"
 }
 
+variable "private_key_file" {
+    type        = string
+    description = "Private key file to connect ec2 machines"
+}
+
 variable "vpc_name" {
     type        = string
     description = "VPC name"
@@ -60,7 +65,7 @@ variable "subnet_1b_az" {
 
 variable "subnet_public" {
     type        = string
-    description = "Public ubnet name"
+    description = "Public subnet name"
 }
 
 variable "subnet_public_cidr_block" {
@@ -73,9 +78,29 @@ variable "subnet_public_az" {
     description = "Availability zone for public subnet"
 }
 
-variable "route_table_name" {
+variable "subnet_public_nat1" {
     type        = string
-    description = "Route table name"
+    description = "Public subnet name"
+}
+
+variable "subnet_public_cidr_block_nat1" {
+    type        = string
+    description = "cidr block for public subnet"
+}
+
+variable "subnet_public_az_nat1" {
+    type        = string
+    description = "Availability zone for public subnet"
+}
+
+variable "route_table_public_name" {
+    type        = string
+    description = "Public route table name"
+}
+
+variable "route_table_public_private_name" {
+    type        = string
+    description = "Private-Public route table name"
 }
 
 variable "security_group_name" {
@@ -117,4 +142,24 @@ variable "instance_tag_type" {
     type        = string
     description = "Tag type to add to ec2 machines"
     default     = "ec2instance"
+}
+
+variable "security_group_web_name" {
+    type        = string
+    description = "Security group name"
+}
+
+variable "security_group_web_description" {
+    type        = string
+    description = "Security group description"
+}
+
+variable "target_group_name" {
+    type        = string
+    description = "Target group name"
+}
+
+variable "lb_name" {
+    type        = string
+    description = "Load Balancer name"
 }
