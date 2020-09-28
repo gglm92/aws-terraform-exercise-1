@@ -93,6 +93,21 @@ variable "subnet_public_az_nat1" {
     description = "Availability zone for public subnet"
 }
 
+variable "subnet_public_nat2" {
+    type        = string
+    description = "Public subnet name"
+}
+
+variable "subnet_public_cidr_block_nat2" {
+    type        = string
+    description = "cidr block for public subnet"
+}
+
+variable "subnet_public_az_nat2" {
+    type        = string
+    description = "Availability zone for public subnet"
+}
+
 variable "route_table_public_name" {
     type        = string
     description = "Public route table name"
