@@ -35,7 +35,7 @@ security_group_description = "Allow SSH inbound traffic"
 
 instance_ami_bastion = "ami-09d8b5222f2b93bf0"
 instance_type_bation = "t2.micro"
-instance_key_name = "garylopezgt"
+instance_key_name = "YOUR_KEY_NAME"
 instance_tag_type = "ec2instance"
 
 instance_ami = "ami-09d8b5222f2b93bf0"
